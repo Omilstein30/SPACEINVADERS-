@@ -1,2 +1,2 @@
-class Alien(){
+class Alien{
 }

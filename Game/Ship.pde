@@ -17,9 +17,9 @@
     c = c1;
   } 
   void display(){
-    rect(x, y, 20, 7);
-    rect(x, y - 3, 15, 7);
-    rect(x, y - 5, 4, 4);
+    rect(x, y, 40, 14);
+    rect(x+4, y - 6, 32, 14);
+    rect(x+16, y - 14, 8, 16);
     fill(c);
   }
 }
