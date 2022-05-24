@@ -7,6 +7,12 @@ void setup(){
   ArrayList<Alien> currentAliens = new ArrayList<Alien>();
   }
   void keyPressed(){
+    if(key == 'a'){
+      commandShip.moveRight();
+    }
+    if(key == 'd'){
+      commandShip.moveLeft();
+    }
   }
   void draw(){
     background(0);
