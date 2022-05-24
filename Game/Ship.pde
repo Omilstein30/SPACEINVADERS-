@@ -22,4 +22,8 @@
     rect(x+16, y - 14, 8, 16);
     fill(c);
   }
+  void move(){
+    x += xSpeed;
+    y += ySpeed;
+  }
 }
