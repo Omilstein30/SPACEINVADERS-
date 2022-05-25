@@ -1,4 +1,5 @@
 Ship commandShip = new Ship(500, 750, 0, 0);
+AlienWave waveOne = new AlienWave(10, 7);
 void setup(){
   size(1000, 800);
   background(0, 0, 0); 
@@ -23,4 +24,5 @@ void setup(){
     background(0);
     commandShip.move();
     commandShip.display();
+    waveOne.display();
   }
