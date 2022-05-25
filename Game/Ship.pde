@@ -23,10 +23,17 @@
     fill(c);
   }
   void moveLeft(){
-    xSpeed += 30;
+    if(xSpeed != 6){
+    xSpeed = 6;
+    }
   }
   void moveRight(){
-    xSpeed -= 30;
+    if(xSpeed != -6){
+    xSpeed = -6;
+    }
+  }
+  void stopMoving(){
+    xSpeed = 0;
   }
   void move(){
     x += xSpeed;
