@@ -18,8 +18,8 @@ class Alien{
     c = c_;
   }
   void display(){
-    rect(x, y, 30, 30);
     fill(c);
+    rect(x, y, 30, 30);
   }
   void move(){
   }

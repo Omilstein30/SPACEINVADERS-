@@ -9,8 +9,11 @@ class AlienWave{
   void display(){
     for(int i = 0; i < aliensPerRow; i++){
       for(int j = 0; j < aliensPerCol; j++){
-        currentAliens.add(new Alien(width/aliensPerRow * i,(height/2)/aliensPerCol * j , 0, 0));
+        currentAliens.add(new Alien(width/aliensPerRow * i + aliensPerRow * 10,(height/2)/aliensPerCol * j + aliensPerRow * 10, 0, 0));
       }
+    }
+    for(int i = 0; i < currentAliens.size(); i++){
+      currentAliens.get(i).display();
     }
   }
   void move(){
