@@ -10,4 +10,4 @@ Project Description:
 Development Log:
 5/23: I basically started the basics of the project. I created all of the classes, and wrote the most basic form of all of the constructors, just making sure that everything ran smoothly.
 5/24: I created the more complex constructors for all of the classes that take in colors, position, and speed. I also wrote the display methods and created the initial form of the ship and the aliens, along with move methods and a bugged draw method.
-5/25: 
+5/25: I fixed the draw method and i created a new class called alien wave, which makes waves of aliens. I also redid the ships movement to make it a lot more effective.
