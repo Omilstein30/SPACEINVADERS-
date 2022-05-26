@@ -22,5 +22,14 @@ class Alien{
     rect(x, y, 30, 30);
   }
   void move(){
+    if(AlienDirection == LEFT_){
+      x -= 40;
+    }
+    if(AlienDirection == RIGHT_){
+      x += 40;
+    }
+    if(AlienDirection == DOWN_){
+      y += 40;
+    }
   }
 }

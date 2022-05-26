@@ -17,5 +17,14 @@ class AlienWave{
     }
   }
   void move(){
+    for(int i = 0; i < currentAliens.size(); i++){
+      if(currentAliens.get(i).x == 15){
+        AlienDirection = DOWN_;
+      }
+      if(currentAliens.get(i).x == 985){
+        AlienDirection = DOWN_;
+      }
+      currentAliens.get(i).move();
+    }
   }
 }
