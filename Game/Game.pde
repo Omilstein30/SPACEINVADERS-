@@ -1,5 +1,5 @@
 Ship commandShip = new Ship(500, 750, 0, 0);
-AlienWave waveOne = new AlienWave(5, 20);
+AlienWave waveOne = new AlienWave(20, 20);
 int RIGHT_ = 0;
 int DOWN_ = 1;
 int LEFT_ = 2;
@@ -34,7 +34,7 @@ void setup(){
     commandShip.display();
     waveOne.display();
     if(countdown == 0){
-      //waveOne.move();
+      waveOne.move();
       countdown = 60;
       println(waveOne.get(0));
       if(AlienDirection == DOWN_ &&  waveOne.get(0).x == 15){

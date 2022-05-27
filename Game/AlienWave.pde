@@ -7,7 +7,7 @@ ArrayList<Alien> currentAliens = new ArrayList<Alien>();
     aliensPerCol = aliensPerCol_;
     for(int i = 0; i < aliensPerRow; i++){
       for(int j = 0; j < aliensPerCol; j++){
-        currentAliens.add(new Alien(width/aliensPerRow * i + aliensPerRow * 10,(height/2)/aliensPerCol * j + aliensPerRow * 10, 0, 0));
+        currentAliens.add(new Alien((1000/aliensPerRow * i) + aliensPerRow * 10,(800/2)/aliensPerCol * j + aliensPerRow * 10, 0, 0));
       }
     }
     
