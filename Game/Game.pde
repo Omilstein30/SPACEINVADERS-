@@ -37,10 +37,10 @@ void setup(){
     if(countdown == 0){
       waveOne.move();
       countdown = 60;
-      if(AlienDirection == DOWN_ &&  one is on the far left ){
+      if(AlienDirection == DOWN_ &&  waveOne.get(0).x == 15){
         AlienDirection = RIGHT_;
       }
-      if(AlienDirection == DOWN_ && one is on the far right ){
+      if(AlienDirection == DOWN_ && waveOne.get(waveOne.get(aliensPerRow)).x == 985){
         AlienDirection = LEFT_;
       }
     }

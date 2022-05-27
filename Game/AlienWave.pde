@@ -27,4 +27,7 @@ class AlienWave{
       currentAliens.get(i).move();
     }
   }
+  void get(int index){
+  return(currentAliens.get(i));
+  }
 }
