@@ -23,10 +23,10 @@ class Alien{
   }
   void move(){
     if(AlienDirection == LEFT_){
-      x -= 40;
+      xSpeed = -40;
     }
     if(AlienDirection == RIGHT_){
-      x += 40;
+      xSpeed  =  40;
     }
     if(AlienDirection == DOWN_){
       y += 40;
