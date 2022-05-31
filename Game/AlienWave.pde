@@ -20,10 +20,10 @@ ArrayList<Alien> currentAliens = new ArrayList<Alien>();
   }
   void move(){
     for(int i = 0; i < currentAliens.size(); i++){
-      if(currentAliens.get(i).x == 15){
+      if(currentAliens.get(i).x <= 40 && (AlienDirection == RIGHT_ || AlienDirection == LEFT_)){
         AlienDirection = DOWN_;
       }
-      if(currentAliens.get(i).x == 985){
+      if(currentAliens.get(i).x >= 960 && (AlienDirection == RIGHT_ || AlienDirection == LEFT_)){
         AlienDirection = DOWN_;
       }
       currentAliens.get(i).move();

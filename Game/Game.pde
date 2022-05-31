@@ -1,9 +1,9 @@
 Ship commandShip = new Ship(500, 750, 0, 0);
-AlienWave waveOne = new AlienWave(20, 20);
+AlienWave waveOne = new AlienWave(7, 7);
 int RIGHT_ = 0;
 int DOWN_ = 1;
 int LEFT_ = 2;
-int AlienDirection = LEFT_; 
+int AlienDirection = RIGHT_; 
 int countdown;
 void setup(){
   size(1000, 800);
@@ -37,10 +37,10 @@ void setup(){
       waveOne.move();
       countdown = 60;
       println(waveOne.get(0));
-      if(AlienDirection == DOWN_ &&  waveOne.get(0).x == 15){
+      if(AlienDirection == DOWN_ &&  waveOne.get(0).x <= 40){
         AlienDirection = RIGHT_;
       }
-      if(AlienDirection == DOWN_ && waveOne.get(waveOne.getPerRow()).x == 985){
+      if(AlienDirection == DOWN_ && waveOne.get(waveOne.getPerRow()).x >= 960){
         AlienDirection = LEFT_;
       }
     }
