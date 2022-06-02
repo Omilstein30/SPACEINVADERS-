@@ -2,8 +2,9 @@ Ship commandShip = new Ship(500, 750, 0, 0);
 AlienWave waveOne = new AlienWave(5, 5);
 int RIGHT_ = 0;
 int LEFT_ = 2;
-int AlienDirection = RIGHT_; 
+int AlienDirection = LEFT_; 
 int countdown;
+boolean canTurn = true;
 void setup(){
   size(1000, 800);
   background(0, 0, 0); 
@@ -25,6 +26,7 @@ void setup(){
     }
   }
   void draw(){
+    
     if(countdown > 0){
       countdown --;
     } 
@@ -33,13 +35,20 @@ void setup(){
     commandShip.display();
     waveOne.display();
       waveOne.move();
-      if(waveOne.get(0).x < 15 || waveOne.get(waveOne.aliensPerRow * waveOne.aliensPerCol - 1).x > 980){
+      if((waveOne.get(0).x < 15 || waveOne.get(waveOne.aliensPerRow * waveOne.aliensPerCol - 1).x > 980) && canTurn == true){
       for(int i = 0; i < waveOne.aliensPerRow * waveOne.aliensPerCol; i++){
-        if(countdown == 0){
           waveOne.get(i).y += 40;
+          if(AlienDirection == RIGHT_){
+            AlienDirection = LEFT_;
+          }
+           if(AlienDirection == LEFT_){
+            AlienDirection = RIGHT_;
+          }
+          canTurn = false;
         }
-          waveOne.get(i).xSpeed = - waveOne.get(i).xSpeed;
-        }
+      }
+      if(waveOne.get((waveOne.aliensPerRow * waveOne.aliensPerCol)/ 2).x == width/2){
+        canTurn = true;
       }
     
     countdown = 60;
