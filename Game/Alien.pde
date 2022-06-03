@@ -30,4 +30,6 @@ class Alien{
     }
     x += xSpeed;
   }
+  void shoot(){
+  }
 }

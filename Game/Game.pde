@@ -16,6 +16,9 @@ void setup(){
     if(key == 'd'){
       commandShip.moveLeft();
     }
+    if(key == ' '){
+      commandShip.shoot();
+    }
   }
   void keyReleased(){
     if(key == 'a'){

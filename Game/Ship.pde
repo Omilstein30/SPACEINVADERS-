@@ -2,6 +2,7 @@
    float x, y;
    float xSpeed, ySpeed;
    color c;
+   ArrayList<Bullet> currentBullets = new ArrayList<Bullet>();
   public Ship(float x1, float y1, float xSpeed_, float ySpeed_){
     x = x1;
     y = y1;
@@ -17,10 +18,15 @@
     c = c1;
   } 
   void display(){
+    for(int i = 0; i < currentBullets.size(); i++){
+      currentBullets.get(i).move();
+      currentBullets.get(i).display();
+    } 
     fill(c);
     rect(x, y, 40, 14);
     rect(x+4, y - 6, 32, 14);
     rect(x+16, y - 14, 8, 16);    
+    
   }
   void moveLeft(){
     if(xSpeed != 6){
@@ -38,5 +44,8 @@
   void move(){
     x += xSpeed;
     y += ySpeed;
+  }
+  void shoot(){
+    currentBullets.add(new Bullet(x + 20, y - 14, 0));
   }
 }
