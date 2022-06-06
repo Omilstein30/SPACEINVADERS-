@@ -2,7 +2,7 @@
    float x, y;
    float xSpeed, ySpeed;
    color c;
-   ArrayList<Bullet> currentBullets = new ArrayList<Bullet>();
+   
   public Ship(float x1, float y1, float xSpeed_, float ySpeed_){
     x = x1;
     y = y1;

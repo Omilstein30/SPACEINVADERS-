@@ -1,5 +1,6 @@
  Ship commandShip = new Ship(500, 750, 0, 0);
 AlienWave waveOne = new AlienWave(5, 5);
+ArrayList<Bullet> currentBullets = new ArrayList<Bullet>();
 int RIGHT_ = 0;
 int LEFT_ = 2;
 int AlienDirection = RIGHT_; 
@@ -50,7 +51,12 @@ void setup(){
           AlienDirection = LEFT_;
         }
       }
-      
+      for(int i = 0; i < waveOne.aliensPerRow * waveOne.aliensPerCol; i++){
+        int randomNum = (int)(random(150));
+        if(randomNum == 7){
+          waveOne.get(i).shoot();
+        }
+      }
     
     countdown = 60;
   }

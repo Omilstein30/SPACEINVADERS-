@@ -17,7 +17,7 @@ class Bullet{
     if(type == 1){
     HEIGHT_ = 4;
     WIDTH_ = 4;
-    SPEED_ = 4;
+    SPEED_ = 8;
     COLOR_ = 255;
     x = x_;
     y = y_;
