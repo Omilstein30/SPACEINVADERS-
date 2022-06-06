@@ -6,6 +6,9 @@ int LEFT_ = 2;
 int AlienDirection = RIGHT_; 
 int countdown;
 boolean canTurn = true;
+Barrier No1 = new Barrier(width/3, 650);
+  Barrier No2 = new Barrier(width/3 * 2, 650);
+  Barrier No3 = new Barrier(width - 100, 650);
 void setup(){
   size(1000, 800);
   background(0, 0, 0); 
@@ -31,7 +34,9 @@ void setup(){
     }
   }
   void draw(){
-    
+    No1.display();
+    No2.display();
+    No3.display();
     if(countdown > 0){
       countdown --;
     } 
