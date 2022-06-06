@@ -25,6 +25,7 @@ class Bullet{
   }
   void display(){
     rect(x, y, WIDTH_, HEIGHT_);
+    fill(237, 59, 74);
   }
   void move(){
     y += SPEED_;

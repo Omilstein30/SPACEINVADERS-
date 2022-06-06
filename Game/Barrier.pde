@@ -9,8 +9,8 @@ class Barrier{
     c =  color(59, 48, 112);
   }
   void display(){
-    
-    rect(x, y, bWidth, bHeight);
     fill(c);
+    rect(x, y, bWidth, bHeight);
+    
   }
 }
