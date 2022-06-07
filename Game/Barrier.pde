@@ -21,6 +21,7 @@ class Barrier{
       if(currentBullets.get(i).x >= x - 50 && currentBullets.get(i).x <= x + 50 && currentBullets.get(i).y >= y - 35 && currentBullets.get(i).y <= y + 35){ 
         if(bHeight > 0){
         bHeight -= .3;
+        currentBullets.remove(i);
         }
         else{
           canDisplay = false;

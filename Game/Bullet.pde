@@ -5,6 +5,7 @@ class Bullet{
   color COLOR_;
   float x;
   float y;
+  int type_;
   public Bullet(float x_, float y_, int type){
     if(type == 0){
     HEIGHT_ = 8;
@@ -13,6 +14,7 @@ class Bullet{
     COLOR_ = 255;
     x = x_;
     y = y_;
+    type_ = type;
     }
     if(type == 1){
     HEIGHT_ = 4;
@@ -21,6 +23,7 @@ class Bullet{
     COLOR_ = 255;
     x = x_;
     y = y_;
+    type_ = type;
     }
   }
   void display(){
@@ -29,5 +32,8 @@ class Bullet{
   }
   void move(){
     y += SPEED_;
+  }
+  int getType(){
+    return type_;
   }
 }

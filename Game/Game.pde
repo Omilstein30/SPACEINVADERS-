@@ -42,6 +42,7 @@ void setup(){
     No1.destroy();
     No2.destroy();
     No3.destroy();
+    waveOne.removeAliens();
     commandShip.move();
     commandShip.display();
     waveOne.display();

@@ -32,4 +32,14 @@ ArrayList<Alien> currentAliens = new ArrayList<Alien>();
   int getPerCol(){
     return aliensPerCol;
   }
+  void removeAliens(){
+    for(int j = 0; j < currentAliens.size(); j++){
+      for(int i = 0; i < currentBullets.size(); i++){
+        if(currentBullets.get(i).getType() == 0 && currentBullets.get(i).x >= currentAliens.get(j).x - 15 && currentBullets.get(i).x <= currentAliens.get(j).x + 15 && currentBullets.get(i).y >= currentAliens.get(j).y - 15 && currentBullets.get(i).y <= currentAliens.get(j).y + 15){
+        currentAliens.remove(j);
+        currentBullets.remove(i);
+        }
+      }
+    }
+  }
 }

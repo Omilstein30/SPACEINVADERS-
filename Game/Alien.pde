@@ -33,4 +33,6 @@ class Alien{
   void shoot(){
     currentBullets.add(new Bullet( x, y, 1));
   }
+  
+    
 }
