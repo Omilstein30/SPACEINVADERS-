@@ -39,6 +39,9 @@ void setup(){
     No1.display();
     No2.display();
     No3.display();
+    No1.destroy();
+    No2.destroy();
+    No3.destroy();
     commandShip.move();
     commandShip.display();
     waveOne.display();
