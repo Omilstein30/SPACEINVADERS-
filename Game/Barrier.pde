@@ -10,7 +10,13 @@ class Barrier{
   }
   void display(){
     fill(c);
-    rect(x, y, bWidth, bHeight);
-    
+    rect(x, y, bWidth, bHeight);    
+  }
+  void destroy(){
+    for(int i = 0; i < currentBullets.size(); i++){
+      if(currentBullets.get(i).x >= x - 50 && currentBullets.get(i).x <= x + 50 && currentBullets.get(i).y >= y - 35 && currentBullets.get(i).y <= y + 35){
+        bWidth -= 10;
+      }
+    }
   }
 }
