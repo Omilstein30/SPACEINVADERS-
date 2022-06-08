@@ -33,6 +33,8 @@ class Alien{
   void shoot(){
     currentBullets.add(new Bullet( x, y, 1));
   }
-  
+  boolean isColliding(Bullet a){
+    return(a.getType() == 0 && a.x >= x - 15 && a.x <= x + 15 && a.y >= y - 15 && a.y <= y + 15);
+  }
     
 }
