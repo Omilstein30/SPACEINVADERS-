@@ -1,7 +1,7 @@
 class AlienWave{
 int aliensPerCol;
 int aliensPerRow;
-ArrayList<Alien> currentAliens = new ArrayList<Alien>();
+
   public AlienWave(int aliensPerRow_ , int aliensPerCol_){
     aliensPerRow = aliensPerRow_;
     aliensPerCol = aliensPerCol_;
@@ -12,7 +12,9 @@ ArrayList<Alien> currentAliens = new ArrayList<Alien>();
     }
     
   }
-  
+  int size(){
+    return currentAliens.size();
+  }
   void display(){  
     
     for(int i = 0; i < currentAliens.size(); i++){
@@ -25,7 +27,9 @@ ArrayList<Alien> currentAliens = new ArrayList<Alien>();
     }    
   }
   Alien get(int index){
+    
     return(currentAliens.get(index));
+  
   }
   int getPerRow(){
     return aliensPerRow;
@@ -34,15 +38,17 @@ ArrayList<Alien> currentAliens = new ArrayList<Alien>();
     return aliensPerCol;
   }
   void removeAliens(){
-    for(int j = currentAliens.size()-1; j >= 0 ; j--){
-      for(int i = currentBullets.size()-1; i >= 0 ; i--){
-       println(currentAliens.size() + " " + j);         
+    boolean bulletStillAlive = true;
+    for(int j = currentAliens.size()-1; j >= 0 && bulletStillAlive; j--){
+      for(int i = currentBullets.size()-1; i >= 0 && bulletStillAlive; i--){
+       
         if(currentAliens.get(j).isColliding(currentBullets.get(i))){
         currentAliens.remove(j);
         currentBullets.remove(i);
-        
+        bulletStillAlive = false;
         }
       }
     }
+    
   }
 }
