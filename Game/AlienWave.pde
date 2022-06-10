@@ -12,6 +12,7 @@ ArrayList<Alien> currentAliens = new ArrayList<Alien>();
     }
     
   }
+  
   void display(){  
     
     for(int i = 0; i < currentAliens.size(); i++){
@@ -35,7 +36,7 @@ ArrayList<Alien> currentAliens = new ArrayList<Alien>();
   void removeAliens(){
     for(int j = currentAliens.size()-1; j >= 0 ; j--){
       for(int i = currentBullets.size()-1; i >= 0 ; i--){
-        println(currentAliens.size() + " " + j);       
+       println(currentAliens.size() + " " + j);         
         if(currentAliens.get(j).isColliding(currentBullets.get(i))){
         currentAliens.remove(j);
         currentBullets.remove(i);
