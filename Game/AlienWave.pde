@@ -15,6 +15,7 @@ int aliensPerRow;
   int size(){
     return currentAliens.size();
   }
+  
   void display(){  
     
     for(int i = 0; i < currentAliens.size(); i++){

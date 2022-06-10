@@ -61,7 +61,7 @@ void setup(){
           AlienDirection = LEFT_;
         }
       }
-      for(int i = 0; i < waveOne.size(); i++){
+      for(int i = 0; i < currentAliens.size(); i++){
         int randomNum = (int)(random(150));
         if(randomNum == 7){
           waveOne.get(i).shoot();
